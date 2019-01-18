@@ -14,7 +14,7 @@ export const defaultTasks = [
 ];
 
 export const withPinnedTasks = [
-    ...defaultTasks.slice(0, 5),
+    ...defaultTasks.slice( 0, 5 ),
     { id: '6', title: 'Task 6 (pinned)', state: 'TASK_PINNED' },
 ];
 

@@ -43,10 +43,10 @@ function TaskList ({ loading, tasks, onPinTask, onArchiveTask }) {
         );
     }
 
-    const tasksInOrder = {
+    const tasksInOrder = [
         ...tasks.filter ( t => t.state === 'TASK_PINNED' ),
         ...tasks.filter ( t => t.state !== 'TASK_PINNED' ),
-    }
+    ];
 
     return ( 
         < div className = "list=items" >
