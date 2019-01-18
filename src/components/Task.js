@@ -11,7 +11,7 @@ export default function Task ({ task: { id, title, state }, onArchiveTask, onPin
                     disabled = { true }
                     name = "checked"
                 />
-                < span className = "checkbox-custom" onClick = {() => onArchiveTask(id)} />
+                < span className = "checkbox-custom" onClick = {() => onArchiveTask( id )} />
             </label>
             < div className = "title" >
                 < input 
