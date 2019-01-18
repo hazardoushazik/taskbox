@@ -16,7 +16,7 @@ export const actions = {
     onArchiveTask: action ( 'onArchiveTask' ),
 };
 
-storiesOf ( 'Task', modulde )
+storiesOf ( 'Task', module )
     .add ( 'default', () => < Task task = { task }                              { ...actions } />)
     .add ( 'pinned',  () => < Task task = {{ ...task, state: 'TASK_PINNED' }}   { ...actions } />)
     .add ( 'pinned',  () => < Task task = {{ ...task, state: 'TASK_ARCHIVED' }} { ...actions } />);
