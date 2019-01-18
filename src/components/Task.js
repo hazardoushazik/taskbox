@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-export default function Task ({ task: { id, title, state }, onArchiveTask, onPinTask }) {
+export default function Task ({ task: { id, title, state }, onPinTask, onArchiveTask }) {
     return (
-        < div className = "list-item ${state}" >
+        < div className = "list-item ${ state }" >
             < label className = "checkbox" >
                 < input
                     type = "checkbox" 
@@ -22,7 +22,7 @@ export default function Task ({ task: { id, title, state }, onArchiveTask, onPin
                 />
             </ div >
             < div className = "actions" onClick = { event => event.stopPropagation () } >
-                { state !== 'TASK_ARCHIVED' && (
+                { state !== 'TASK_PINNED' && (
                     < a onClick = { () => onPinTask ( id ) } >
                         < span className = { 'icon-star' } />
                     </a>
